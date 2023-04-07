@@ -20,9 +20,9 @@ namespace Evstr.Score
         {
             while (true)
             {
+                yield return new WaitForSeconds(timeIndex);
                 _score++;
                 _scoreText.text = _score.ToString();
-                yield return new WaitForSeconds(timeIndex);
             }
         }
     }
