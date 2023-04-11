@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3668543108433105342}
   - component: {fileID: 2084658933840333305}
   - component: {fileID: -6355869096707143183}
-  - component: {fileID: 1285801322969441101}
   - component: {fileID: 8582407478645466955}
   m_Layer: 0
   m_Name: SpeedBonus
@@ -118,18 +117,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af722581595ff42d68932faa19674636, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1285801322969441101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3668543108433105341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac2cf5e4b0a1d47238c57fb515d5942d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!61 &8582407478645466955

@@ -26,11 +26,14 @@ namespace Evstr.Bonus
                         {
                             Score.score += 100;
                             hit.collider.gameObject.SetActive(false);
+                            Instantiate(_plus100Prefab);
                         }
                         else if (hit.collider.gameObject.CompareTag("SpeedBonus"))
                         {
                             BackgroundMove.speed += 2;
+                            Score.timeIndex -= 0.1f;
                             hit.collider.gameObject.SetActive(false);
+                            Instantiate(_speedUpPrefab);
                         }
                     }                        
                 }
