@@ -1,11 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Evstr.Background;
+using Evstr.ScoreGame;
 
 namespace Evstr.Bonus
 {
     public class BonusDetector : MonoBehaviour
     {
+        [SerializeField] private GameObject _plus100Prefab;
+        [SerializeField] private GameObject _speedUpPrefab;
+
+
         void Update()
         {
             if (Input.touchCount > 0)
@@ -18,15 +24,13 @@ namespace Evstr.Bonus
                     {
                         if (hit.collider.gameObject.CompareTag("StarBonus"))
                         {
-                            Debug.Log("WTF");
+                            Score.score += 100;
+                            hit.collider.gameObject.SetActive(false);
                         }
                         else if (hit.collider.gameObject.CompareTag("SpeedBonus"))
                         {
-                            Debug.Log("LOL");
-                        }
-                        else if (hit.collider.gameObject.CompareTag("Background"))
-                        {
-                            return;
+                            BackgroundMove.speed += 2;
+                            hit.collider.gameObject.SetActive(false);
                         }
                     }                        
                 }

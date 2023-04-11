@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Evstr.Score
+namespace Evstr.ScoreGame
 {
     public class Score : MonoBehaviour
     {

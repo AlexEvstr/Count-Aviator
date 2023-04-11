@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Evstr.ScoreGame;
 
 namespace Evstr.GUI
 {
@@ -11,7 +12,7 @@ namespace Evstr.GUI
 
         public override void OnClick()
         {
-            Score.Score.timeIndex -= 0.3f;
+            Score.timeIndex -= 0.3f;
             Background.BackgroundMove.speed += 5f;
             _taskPanel.SetActive(false);
             _taskManager.SetNewTask();
