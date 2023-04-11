@@ -18,7 +18,6 @@ namespace Evstr
         {
             _randomIndex = Random.Range(0, _tasks.Length);
             _tasks[_randomIndex].SetActive(true);
-            Debug.Log(_randomIndex);
         }
     }
 }
