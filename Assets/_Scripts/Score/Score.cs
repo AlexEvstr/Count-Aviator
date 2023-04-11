@@ -8,12 +8,13 @@ namespace Evstr.Score
     public class Score : MonoBehaviour
     {
         [SerializeField] private Text _scoreText;
-        private int _score;
+        public static int score;
         public static float timeIndex = 1.0f;
 
         private void Start()
         {
             StartCoroutine(IncreaseScore());
+            score = 0;
         }
 
         private IEnumerator IncreaseScore()
@@ -21,8 +22,8 @@ namespace Evstr.Score
             while (true)
             {
                 yield return new WaitForSeconds(timeIndex);
-                _score++;
-                _scoreText.text = _score.ToString();
+                score++;
+                _scoreText.text = score.ToString();
             }
         }
     }
