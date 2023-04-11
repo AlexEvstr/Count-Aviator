@@ -5,12 +5,11 @@ using UnityEngine.SceneManagement;
 
 namespace Evstr.GUI
 {
-    public class UIRestartButton : UIBaseButton
+    public class UIPlayButton : UIBaseButton
     {
         public override void OnClick()
         {
             SceneManager.LoadScene(1);
         }
-
     }
 }
