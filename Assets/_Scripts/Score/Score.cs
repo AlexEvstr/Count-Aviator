@@ -26,5 +26,10 @@ namespace Evstr.Score
                 _scoreText.text = score.ToString();
             }
         }
+
+        private void OnDisable()
+        {
+            PlayerPrefs.SetInt("LastScore", score);
+        }
     }
 }
