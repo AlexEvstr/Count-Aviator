@@ -13,11 +13,8 @@ namespace Evstr.GUI
 
         public override void OnClick()
         {
-            if (Score.timeIndex > 0.1f && BackgroundMove.speed < 22.0f)
-            {
-                Score.timeIndex -= 0.1f;
-                BackgroundMove.speed += 2f;
-            }
+            Score.timeIndex += 0.1f;
+            BackgroundMove.speed -= 2f;
             _taskPanel.SetActive(false);
             _taskManager.SetNewTask();
         }

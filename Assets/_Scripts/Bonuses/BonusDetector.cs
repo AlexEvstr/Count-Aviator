@@ -30,8 +30,11 @@ namespace Evstr.Bonus
                         }
                         else if (hit.collider.gameObject.CompareTag("SpeedBonus"))
                         {
-                            BackgroundMove.speed += 2;
-                            Score.timeIndex -= 0.1f;
+                            if (Score.timeIndex > 0.1f && BackgroundMove.speed < 22.0f)
+                            {
+                                Score.timeIndex -= 0.1f;
+                                BackgroundMove.speed += 2f;
+                            }
                             hit.collider.gameObject.SetActive(false);
                             Instantiate(_speedUpPrefab);
                         }
