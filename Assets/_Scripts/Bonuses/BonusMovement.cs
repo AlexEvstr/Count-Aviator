@@ -6,12 +6,12 @@ namespace Evstr.Bonus
 {
     public class BonusMovement : MonoBehaviour
     {
-        private float _speed = 3.0f;
+        private float _speed = 2.0f;
 
         private void Update()
         {
-            transform.Translate(Vector2.left * _speed * Time.deltaTime);
-            if (transform.position.x < -13.0f)
+            transform.Translate(Vector2.down * _speed * Time.deltaTime);
+            if (transform.position.y < -7.0f)
             {
                 gameObject.SetActive(false);
             }

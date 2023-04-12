@@ -7,9 +7,10 @@ namespace Evstr.Bonus
 {
     public class BonusSpawner : MonoBehaviour
     {
-        private float _xPosition = 20.0f;
-        private float _yPosition;
-        private float _yBoards = 4.0f;
+        private float _xPosition;
+        private float _yPosition = 28.0f;
+        private float _xBoardLeft = -8.0f;
+        private float _xBoardRight = -1.0f;
         private float _randomTime;
 
 
@@ -25,7 +26,7 @@ namespace Evstr.Bonus
                 _randomTime = Random.Range(5f, 10f);
                 yield return new WaitForSeconds(_randomTime);
                 GameObject bonus = ObjectPoolBonus.SharedInstance.GetPooledObject();
-                _yPosition = Random.Range(-_yBoards, _yBoards);
+                _xPosition = Random.Range(_xBoardLeft, _xBoardRight);
                 if (bonus != null)
                 {
                     bonus.transform.position = new Vector2(_xPosition, _yPosition);
